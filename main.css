@@ -387,6 +387,12 @@ footer {
     color: #ff4d6d;
 }
 
+@media screen and (max-width: 1200px) { 
+    body {
+        overflow-y: auto;
+    }
+}
+
 /* Для мобильных устройств */
 @media screen and (max-width: 600px) {
     .conratulations-box {
