@@ -7,7 +7,7 @@
     <title>С 8 марта!</title>
   </head>
   <body>
-    <!-- декоративные цветы -->
+    <!-- Декоративные цветы на фоне -->
     <div class="flower-bg">
       <span></span>
       <span></span>
@@ -15,7 +15,7 @@
     </div>
 
     <div class="container">
-      <!-- Авторизационная карточка (логин/пароль) -->
+      <!-- Карточка входа. Просим логин и пароль -->
       <div id="authCard" class="auth-card">
         <h1><span>🌷</span> 8 марта</h1>
         <div class="subtitle">введите секретный код для входа</div>
@@ -42,98 +42,92 @@
 
         <button class="btn" id="loginBtn">🌸 войти</button>
 
+        <!-- Подсказка для входа -->
         <div class="hint">
-          <span>💡 Логин:</span> asbugaye <span>💡 Пароль:</span> tulip
+          <span>💡 Логин - </span> твой рабочий email <span>💡 Пароль:</span> Change
         </div>
+
+        <!-- Место для ошибки -->
         <div id="authError" class="error-message"></div>
       </div>
 
-      <!-- Контентный экран (появляется после успеха) -->
+      <!-- Основной экран. Появляется после успешного входа -->
       <div id="contentScreen" class="content-screen hidden">
         <div class="content-box">
           <div class="content-header">
-            <button
-              class="show-conratulations btn"
-              style="
-                width: fit-content;
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                font-size: 14px;
-                padding: 10px 18px;
-                display: none;
-                margin-top: 0 !important;
-              "
-            >
-              Поздравления
-            </button>
+            <!-- Кнопка "Поздравления". Изначально скрыта -->
+            <button class="show-conratulations btn">Поздравления</button>
             <h2 id="contentTitle">🌸 привет!</h2>
           </div>
 
-          <!-- сюда подставим контент в зависимости от связки -->
+          <!-- Сюда подставится персональный контент -->
           <div id="dynamicContent" class="dynamic-content">
-            <!-- заполняется js -->
+            <!-- Заполняется из JavaScript -->
           </div>
 
+          <!-- Кнопка возврата на карточку входа -->
           <button class="back-btn" id="logoutBtn">← Вернуться</button>
         </div>
         <footer>✨ с праздником весны ✨</footer>
       </div>
 
-      <!-- Блок с поздравлениями для телефона (появляется по кнопке) -->
+      <!-- Блок с коллективными поздравлениями -->
+      <!-- Изначально скрыт. Появляется по кнопке "Поздравления" -->
       <div class="conratulations-box">
-        <button
-          class="hide-conratulations btn">
-          Вернуться
-        </button>
-        <!-- Сюда на телефоне будут копироваться поздравления из JS -->
+        <!-- Кнопка возврата к основному контенту -->
+        <button class="hide-conratulations btn">Вернуться</button>
+
+        <!-- Сами поздравления -->
+        <div class="congratulation">
+          <span class="congratulation__title">Игорь</span>
+          <span class="congratulation__text congratulation__text-igor">            
+        </span>
+        </div>
+
+        <div class="congratulation">
+          <span class="congratulation__title">Лёша</span>
+          <span class="congratulation__text congratulation__text-alex">          
+          </span>
+        </div>
+
+        <div class="congratulation">
+          <span class="congratulation__title">Мацко Антон</span>
+          <span class="congratulation__text congratulation__text-antonM"> 
+          
+          </span>
+        </div>
+
+        <div class="congratulation">
+          <span class="congratulation__title">Куликов Антон</span>
+          <span class="congratulation__text congratulation__text-antonK"> 
+          
+          </span>
+        </div>
+
+        <div class="congratulation">
+          <span class="congratulation__title">Костя</span>
+          <span class="congratulation__text congratulation__text-kostya"> 
+          
+          </span>
+        </div>
+
+        <div class="congratulation">
+          <span class="congratulation__title">Денис</span>
+          <span class="congratulation__text congratulation__text-denis"> 
+          
+          </span>
+        </div>
+
+        <div class="congratulation">
+          <span class="congratulation__title">Максим</span>
+          <span class="congratulation__text congratulation__text-max"> 
+          
+          </span>
+        </div>
       </div>
     </div>
 
-    <!-- ВСЕ ПОЗДРАВЛЕНИЯ - на ПК они ВИСЯТ ВОКРУГ, на телефоне - СКРЫТЫ -->
-    <div class="floating-congratulations">
-      <div class="congratulation congratulation-igor">
-        <span class="congratulation__title">Игорь</span>
-        Руководить группой, где каждый день — блокировки, федеральные законы,
-        боты, саммаризация и CR — это не работа, это олимпийская дисциплина. И
-        ты в ней — золотая медалистка. С 8 Марта! 🏅
-      </div>
-      <div class="congratulation congratulation-alex">
-        <span class="congratulation__title">Лёша</span>
-        Ты курируешь тарифы, CJM, EJM, ботов, чаты, CR, Справку, биллинги и ещё
-        полвселенной. И при этом выглядишь так, будто просто зашла на кофе.
-        Как?! С 8 Марта! 💐
-      </div>
-      <div class="congratulation congratulation-antonM">
-        <span class="congratulation__title">Мацко Антон</span>
-        За каждым поздравлением выше стоит человек, который всё это объединил,
-        направил и вдохновил. Этот человек — ты. Поздравляем главную! 🌷
-      </div>
-      <div class="congratulation congratulation-antonK">
-        <span class="congratulation__title">Куликов Антон</span>
-        Ты — как корневая папка: без тебя вся структура рассыпается. Только в
-        отличие от папки — ты ещё и невероятно обаятельная. С праздником! 🌺
-      </div>
-      <div class="congratulation congratulation-kostya">
-        <span class="congratulation__title">Костя</span>
-        Ты умудряешься держать в голове все процессы, всех людей и все проекты
-        одновременно. Мы подозреваем, что у тебя не одна голова, а несколько. Но
-        все — прекрасные. Поздравляем! ✨
-      </div>
-      <div class="congratulation congratulation-denis">
-        <span class="congratulation__title">Денис</span>
-        Каждый в твоей команде делает крутые вещи. Но только ты знаешь, как
-        собрать это в единый механизм, который работает без сбоев. Главный
-        инженер счастья клиентов и сотрудников. С праздником! 🌸
-      </div>
-      <div class="congratulation congratulation-max">
-        <span class="congratulation__title">Максим</span>
-        CJM клиентов, EJM сотрудников, чаты, боты, Справка, CR — ты объединяешь
-        всё это в единую систему, где каждый элемент на своём месте. Включая
-        нас. Спасибо, что ведёшь. С праздником! 🌸
-      </div>
-    </div>
-
+    <!-- Подключаем JavaScript -->
     <script src="main.js"></script>
   </body>
 </html>
