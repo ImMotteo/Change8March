@@ -308,6 +308,8 @@ function fillCongratulations(userData) {
             element.textContent = text;
         }
     }
+
+    if (contentBox) contentBox.style.display = 'block'
 }
 
     // Функция заполнения персонального контента
@@ -361,7 +363,7 @@ function fillCongratulations(userData) {
         }
         
         // Прячем блок с поздравлениями, показываем основной контент
-        if (contentBox) contentBox.style.display = 'block';
+        if (contentBox) contentBox.style.display = 'none';
         if (congratsBox) congratsBox.style.display = 'none';
     });
 
